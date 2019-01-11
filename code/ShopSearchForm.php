@@ -50,7 +50,8 @@ class ShopSearchForm extends Form
         parent::__construct($controller, $method, $fields, FieldList::create(array(FormAction::create('results', _t('ShopSearch.GO', 'Go')))));
 
         $this->setFormMethod('GET');
-        $this->setFormAction('\SearchForm');
+        $this->setFormAction('\home\SearchForm');
+
         $this->disableSecurityToken();
         if ($c = self::config()->css_classes) {
             $this->addExtraClass($c);
