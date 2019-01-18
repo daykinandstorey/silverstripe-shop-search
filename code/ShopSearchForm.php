@@ -30,6 +30,7 @@ class ShopSearchForm extends Form
     {
         $searchField = TextField::create('q', '');
         $searchField->setAttribute('placeholder', _t('ShopSearch.SEARCH', 'Search'));
+        $searchField->setAttribute('autocomplete', 'off');
         if ($suggestURL) {
             $searchField->setAttribute('data-suggest-url', $suggestURL);
         }
